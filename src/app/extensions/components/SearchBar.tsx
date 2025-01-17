@@ -1,5 +1,9 @@
+/**
+ * Search input with loading state for book queries.
+ */
+
 import React from 'react';
-import { Input, Button, Flex, LoadingButton } from "@hubspot/ui-extensions";
+import { Input, Flex, LoadingButton } from "@hubspot/ui-extensions";
 
 interface SearchBarProps {
   searchQuery: string;
@@ -17,15 +21,10 @@ export const SearchBar = ({ searchQuery, onSearchChange, onSearch, isLoading }: 
         value={searchQuery}
         onChange={(e) => onSearchChange(e)}
       />
-      {/* <Button
+      <LoadingButton
+        loading={isLoading}
         onClick={onSearch}
         disabled={!searchQuery || isLoading}
-      >
-        Search
-      </Button> */}
-      <LoadingButton loading={isLoading}
-      onClick={onSearch}
-      disabled={!searchQuery || isLoading}
       >Search</LoadingButton>
     </Flex>
   );

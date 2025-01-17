@@ -1,3 +1,7 @@
+/**
+ * Renders individual book card with cover image, details, and cart interaction.
+ */
+
 import React from 'react';
 import { Text, Box, Button, Flex, Image } from "@hubspot/ui-extensions";
 import type { Book } from '../types/book';

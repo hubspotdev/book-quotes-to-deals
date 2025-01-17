@@ -1,3 +1,7 @@
+/**
+ * Toggles between search and cart views, displaying current cart item count.
+ */
+
 import React from 'react';
 import { Button, Flex } from "@hubspot/ui-extensions";
 
@@ -9,14 +13,12 @@ interface CartToggleProps {
 
 export const CartToggle = ({ itemCount, isCartView, onToggle }: CartToggleProps) => {
   return (
-    // <Flex justify="end">
       <Button
         variant="secondary"
         onClick={onToggle}
       >
         {isCartView ? 'Back to Search' : `View Cart (${itemCount})`}
       </Button>
-    // </Flex>
   );
 };
 

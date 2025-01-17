@@ -1,3 +1,8 @@
+/**
+ * Displays cart contents, allows item removal, and quote generation.
+ * Renders empty state when no items present.
+ */
+
 import React from 'react';
 import { Box, Text, Button, Flex, Image, Alert, Table, TableHead, TableBody, TableCell, TableHeader, TableRow } from "@hubspot/ui-extensions";
 import type { Book } from '../types/book';

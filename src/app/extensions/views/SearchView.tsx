@@ -1,3 +1,8 @@
+/**
+ * Handles book search functionality and displays results in a grid.
+ * Integrates with OpenLibrary API for search results.
+ */
+
 import React, { useState } from 'react';
 import { hubspot, Flex } from "@hubspot/ui-extensions";
 import { SearchBar } from '../components/SearchBar';
@@ -18,7 +23,7 @@ export const SearchView = ({ onAddToCart, isBookInCart }: SearchViewProps) => {
     if (!searchQuery.trim()) return;
 
     setIsLoading(true);
-    setSearchResults([]);  // Clear previous results
+    setSearchResults([]);
 
     try {
       const url = new URL('https://bree-book-quote-card.com/api/books/search');
@@ -29,7 +34,7 @@ export const SearchView = ({ onAddToCart, isBookInCart }: SearchViewProps) => {
       setSearchResults(books);
     } catch (error) {
       console.error('Error searching books:', error);
-      setSearchResults([]);  // Clear on error
+      setSearchResults([]);
     } finally {
       setIsLoading(false);
     }

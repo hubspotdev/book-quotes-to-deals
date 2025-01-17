@@ -1,11 +1,12 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+/**
+ * Creates a HubSpot deal from the book quote with contact association
+ */
+
+import { NextResponse, type NextRequest } from 'next/server';
 
 export async function POST(request: NextRequest) {
-  console.log('Received request to create deal');
   try {
     const { books, total, contactId } = await request.json();
-    console.log('Received request to create deal:', { books, total, contactId });
 
     const dealData = {
       properties: {
@@ -21,14 +22,12 @@ export async function POST(request: NextRequest) {
           types: [
             {
               associationCategory: "HUBSPOT_DEFINED",
-              associationTypeId: 3
+              associationTypeId: 3  // Standard contact-to-deal association type
             }
           ]
         }
       ]
     };
-    console.log(JSON.stringify(dealData.associations))
-    console.log('Deal data being sent to HubSpot:', dealData);
 
     const response = await fetch('https://api.hubapi.com/crm/v3/objects/deals', {
       method: 'POST',
@@ -46,7 +45,6 @@ export async function POST(request: NextRequest) {
     }
 
     const deal = await response.json();
-    console.log('Deal created successfully:', deal);
     return NextResponse.json({ success: true, deal });
 
   } catch (error: any) {

@@ -1,5 +1,8 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+/**
+ * Search endpoint that queries OpenLibrary API and returns books with generated prices
+ */
+
+import { NextResponse, type NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
   try {
@@ -22,6 +25,8 @@ export async function GET(request: NextRequest) {
     }
 
     const data = await response.json();
+
+    // Limit to 5 results and add mock pricing
     const books = data.docs.slice(0, 5).map((book: any) => ({
       ...book,
       price: Math.floor(Math.random() * 10) + 10,

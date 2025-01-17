@@ -1,0 +1,34 @@
+{
+  "name": "Book Quotes to Deals",
+  "uid": "book-quotes-to-deals",
+  "description": "This is a public app that allows you to create deals from book quotes generated on a contact record.",
+  "allowedUrls": [
+    "https://openlibrary.org/",
+    "https://bree-book-quote-card.com"
+  ],
+  "auth": {
+    "redirectUrls": ["http://localhost:3000/oauth-callback"],
+    "requiredScopes": ["crm.objects.contacts.read", "crm.objects.contacts.write", "crm.objects.deals.write",
+    "crm.objects.deals.read"],
+    "optionalScopes": [],
+    "conditionallyRequiredScopes": []
+  },
+  "support": {
+    "supportEmail": "support@example.com",
+    "documentationUrl": "https://example.com/docs",
+    "supportUrl": "https://example.com/support",
+    "supportPhone": "+18005555555"
+  },
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "./extensions/book-quotes-card.json"
+        }
+      ]
+    }
+  },
+  "webhooks": {
+    "file": "./webhooks/webhooks.json"
+  }
+}

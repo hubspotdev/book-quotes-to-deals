@@ -1,0 +1,16 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Book Quotes",
+    "uid": "book-quotes-card",
+    "location": "crm.record.tab",
+    "module": {
+      "file": "BookQuotesCard.tsx"
+    },
+    "objectTypes": [
+      {
+        "name": "contacts"
+      }
+    ]
+  }
+}

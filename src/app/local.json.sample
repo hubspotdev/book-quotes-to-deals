@@ -1,0 +1,6 @@
+{
+  "proxy": {
+    "https://bree-book-quote-card.com/api/books/search": "http://localhost:3001/api/books/search",
+    "https://bree-book-quote-card.com/api/deals": "http://localhost:3001/api/deals"
+  }
+}

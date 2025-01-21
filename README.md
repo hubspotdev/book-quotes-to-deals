@@ -121,7 +121,7 @@ Since this is a public app, always make sure to upload the project into your app
 
 This card is configured to be viewed on Contact records. To view the card for development, navigate to any Contact record and select `Customize record`. Select the view you'd like to update from the table and choose `Add cards`.
 
-![Adding a new card to the middle column of a contact record]()
+<img width="1450" alt="Screenshot 2025-01-21 at 11 14 28 AM" src="https://github.com/user-attachments/assets/bf416eb8-6e16-4784-b358-8f0217b9073b" />
 
 Then, navigate to any contact record page to view the card in the middle column.
 
@@ -129,10 +129,25 @@ Then, navigate to any contact record page to view the card in the middle column.
 
 This app card offers users the ability to:
 - [ ] **Search for books:** Search for books by title, author, or ISBN using the OpenLibrary API
+      
+<br/>
+      
+![search for books](https://github.com/user-attachments/assets/07ee50ac-59c9-41b6-bb82-f7a864d594c7)
+
 
 - [ ] **Build a Cart:** Add or remove books from the cart and toggle between the book search and cart views
+      
+<br/>
+
+![add to cart](https://github.com/user-attachments/assets/e7e1e6bb-85fc-4bdf-a11e-8f7f9e0ee641)
+
 
 - [ ] **Generate a quote deal from the cart items:** Generate a quote deal from the cart items and add it to the contact record with the HubSpot Deals API. After the quote is generated, click the link in the banner to view the deal in HubSpot.
+      
+<br/>
+
+![create a deal](https://github.com/user-attachments/assets/953fde36-f6bc-4443-80f7-42b0a2c3a5ce)
+
 
 
 ## Learn more about App Cards Powered by UI Extensions
